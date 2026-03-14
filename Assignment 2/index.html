@@ -1,111 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple JS Assignment</title>
+    <title>Simple JS Assignment 2</title>
 </head>
-<body>
+<body style="font-family: Arial; padding: 20px;">
 
-    <h1>JavaScript Assignment Tasks</h1>
+    <h2>JavaScript Assignment 2</h2>
     <hr>
 
-    <h3>1. Even Numbers (1 to 100)</h3>
-    <button onclick="showEven()">Show Even Numbers</button>
-    <p id="ans1" style="color: blue;"></p> 
+    <div style="margin-bottom: 30px;">
+        <h3>1. Even Numbers (1 to 100)</h3>
+        <button onclick="task1()">Show Even Numbers</button>
+        <p id="ans1" style="color: green;"></p>
+    </div>
 
-    <hr>
+    <div style="margin-bottom: 30px;">
+        <h3>2. Calculator</h3>
+        <input type="number" id="num1" placeholder="First Number">
+        <input type="number" id="num2" placeholder="Second Number">
+        <br><br>
+        
+        <button onclick="calculator('+')">Add (+)</button>
+        <button onclick="calculator('-')">Subtract (-)</button>
+        <button onclick="calculator('*')">Multiply (*)</button>
+        <button onclick="calculator('/')">Divide (/)</button>
+        
+        <p id="ans2" style="color: green;"></p>
+    </div>
 
-    <h3>2. Simple Calculator</h3>
-    <input type="number" id="num1" placeholder="First Number">
-    <input type="number" id="num2" placeholder="Second Number">
-    <br><br>
-    
-    <button onclick="calculate('+')">Add (+)</button>
-    <button onclick="calculate('-')">Subtract (-)</button>
-    <button onclick="calculate('*')">Multiply (*)</button>
-    <button onclick="calculate('/')">Divide (/)</button>
-    
-    <p id="ans2" style="color: blue; font-weight: bold;"></p>
+    <div style="margin-bottom: 30px;">
+        <h3>3. Tax Calculator</h3>
+        <input type="number" id="salary" placeholder="Enter Your Salary">
+        <button onclick="task3()">Calculate My Tax</button>
+        <p id="ans3" style="color: green;"></p>
+    </div>
 
-    <hr>
+    <div style="margin-bottom: 30px;">
+        <h3>4. Sum of Product of Digits</h3>
+        <input type="number" id="n1" placeholder="First Number">
+        <input type="number" id="n2" placeholder="Second Number">
+        <button onclick="task4()">Calculate Sum</button>
+        <p id="ans4" style="color: green;"></p>
+    </div>
 
-    <h3>3. Tax Calculator</h3>
-    <input type="number" id="salary" placeholder="Enter Salary">
-    <button onclick="findTax()">Calculate Tax</button>
-    <p id="ans3" style="color: blue;"></p>
-
-    <hr>
-
-    <h3>4. Sum of Product of Digits</h3>
-    <input type="number" id="dig1" placeholder="First Number (e.g., 6)">
-    <input type="number" id="dig2" placeholder="Second Number (e.g., 34)">
-    <button onclick="calculateDigits()">Calculate Sum</button>
-    <p id="ans4" style="color: blue;"></p>
-
-    <hr>
-
-    <script>
-    
-        function showEven() {
-            let result = "";
-            for (let i = 1; i <= 100; i++) {
-                if (i % 2 === 0) {
-                    result = result + i + ", ";
-                }
-            }
-           
-            document.getElementById('ans1').innerText = result;
-        }
-
-     
-        function calculate(operator) {
-            
-            let n1 = Number(document.getElementById('num1').value);
-            let n2 = Number(document.getElementById('num2').value);
-            let ans = 0;
-
-            switch(operator) {
-                case "+": ans = n1 + n2; break;
-                case "-": ans = n1 - n2; break;
-                case "*": ans = n1 * n2; break;
-                case "/": ans = n1 / n2; break;
-            }
-            
-            document.getElementById('ans2').innerText = "Answer: " + ans;
-        }
-
-   
-        function findTax() {
-            let salary = Number(document.getElementById('salary').value);
-            let tax = 0;
-
-            switch(true) {
-                case (salary <= 500000): tax = 0; break;
-                case (salary <= 1000000): tax = salary * 0.10; break;
-                case (salary <= 1500000): tax = salary * 0.20; break;
-                case (salary > 1500000): tax = salary * 0.30; break;
-            }
-
-            document.getElementById('ans3').innerText = "Tax amount: " + tax;
-        }
-
-
-        function calculateDigits() {
-            let n1 = Number(document.getElementById('dig1').value);
-            let n2 = Number(document.getElementById('dig2').value);
-            let sum = 0;
-
-            while (n1 > 0 || n2 > 0) {
-                let d1 = n1 % 10;
-                let d2 = n2 % 10;
-                sum = sum + (d1 * d2);
-                
-                n1 = Math.floor(n1 / 10);
-                n2 = Math.floor(n2 / 10);
-            }
-
-            document.getElementById('ans4').innerText = "Sum is: " + sum;
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
