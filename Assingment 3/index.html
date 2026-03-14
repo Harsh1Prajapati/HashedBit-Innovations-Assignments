@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 3</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background-color: #f9f9f9; }
+        .box { background: white; padding: 15px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        h3 { margin-top: 0; color: #333; }
+        input { padding: 5px; margin-right: 10px; margin-bottom: 10px; width: 200px; }
+        button { padding: 6px 12px; cursor: pointer; }
+        pre { color: green; font-weight: bold; font-size: 14px; white-space: pre-wrap; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript Assignment 3</h2>
+    <hr>
+
+    <div class="box">
+        <h3>1. Remove States Starting with Vowels</h3>
+        <p>States: Maharashtra, Assam, Gujarat, Odisha, Punjab</p>
+        <button onclick="task1()">Filter States</button>
+        <pre id="ans1"></pre>
+    </div>
+
+    <div class="box">
+        <h3>2. Reverse Words in 'I love my India'</h3>
+        <button onclick="task2()">Reverse Words</button>
+        <pre id="ans2"></pre>
+    </div>
+
+    <div class="box">
+        <h3>3. Change 'INDIA' to 'INDONESIA'</h3>
+        <button onclick="task3()">Use Splice</button>
+        <pre id="ans3"></pre>
+    </div>
+
+    <div class="box">
+        <h3>4. Count Vowels and Consonants</h3>
+        <input type="text" id="q4_str" placeholder="Enter a long string">
+        <button onclick="task4()">Count Letters</button>
+        <pre id="ans4"></pre>
+    </div>
+
+    <div class="box">
+        <h3>5. Replace Wrong Word</h3>
+        <input type="text" id="q5_sent" placeholder="Full Sentence">
+        <input type="text" id="q5_wrong" placeholder="Wrong Word">
+        <input type="text" id="q5_correct" placeholder="Correct Word">
+        <button onclick="task5()">Replace</button>
+        <pre id="ans5"></pre>
+    </div>
+
+    <div class="box">
+        <h3>6. Filter Numbers Greater Than 5</h3>
+        <p>Array: [1, 2, 3, 9, 10, 7, 5, 4, 3]</p>
+        <button onclick="task6()">Filter > 5</button>
+        <pre id="ans6"></pre>
+    </div>
+
+    <div class="box">
+        <h3>7. Student Average Scores</h3>
+        <button onclick="task7()">Calculate Averages</button>
+        <pre id="ans7"></pre>
+    </div>
+
+    <div class="box">
+        <h3>8. Repeated Sum of Digits</h3>
+        <input type="number" id="q8_num" placeholder="Enter a number ">
+        <button onclick="task8()">Find Single Digit</button>
+        <pre id="ans8"></pre>
+    </div>
+
+    <div class="box">
+        <h3>9. Count Words in Paragraph</h3>
+        <input type="text" id="q9_para" placeholder="Type a Paragraph">
+        <button onclick="task9()">Count Words</button>
+        <pre id="ans9"></pre>
+    </div>
+
+    <div class="box">
+        <h3>10. Reverse a String</h3>
+        <input type="text" id="q10_str" placeholder="Enter word">
+        <button onclick="task10()">Reverse Text</button>
+        <pre id="ans10"></pre>
+    </div>
+
+    <div class="box">
+        <h3>11. Student Subjects Average (Object)</h3>
+        <button onclick="task11()">Find Subject Averages</button>
+        <pre id="ans11"></pre>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
