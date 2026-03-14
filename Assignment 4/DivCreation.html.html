@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlphaBeta Assignment - Div Creation</title>
+
+  <style>
+    
+  </style>
+
+  
+</head>
+<body>
+  <!-- Task Statement
+
+Write a JavaScript function createDiv(width, height, text) that creates and adds a new div element inside the #container div with the specified width and height. The div element should have text as its text content.
+
+Note: Do not modify the HTML code
+
+Note: width and height which are passed as arguments to the createDiv function do not contain the unit. Make sure to add the unit of "px" to it before setting the values -->
+
+<div id="container">
+  
+</div>
+
+  <script>
+    function createDiv(width, height, text) {
+    let newDiv = document.createElement("div");
+    
+    newDiv.style.width = width + "px";
+    newDiv.style.height = height + "px";
+    
+    newDiv.textContent = text;
+    
+
+    newDiv.style.backgroundColor = "lightblue";
+    newDiv.style.border = "2px solid blue";
+    newDiv.style.marginBottom = "10px";
+    newDiv.style.display = "flex";
+    newDiv.style.alignItems = "center";
+    newDiv.style.justifyContent = "center";
+
+
+    let containerBox = document.getElementById("container");
+    containerBox.appendChild(newDiv);
+}
+
+window.createDiv = createDiv;
+
+let myButton = document.createElement("button");
+myButton.textContent = "Create New Div";
+myButton.style.padding = "10px 20px";
+myButton.style.marginBottom = "20px";
+myButton.style.cursor = "pointer";
+myButton.style.backgroundColor = "#4CAF50";
+myButton.style.color = "white";
+myButton.style.fontWeight = "bold";
+
+myButton.onclick = function() {
+    createDiv(250, 100, "New Container!");
+};
+
+let mainContainer = document.getElementById("container");
+document.body.insertBefore(myButton, mainContainer);
+  </script>
+</body>
+</html>
