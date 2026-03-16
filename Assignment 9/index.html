@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 9</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; max-width: 800px; margin: auto; }
+        section { border-bottom: 1px solid #ddd; padding: 15px 0; }
+        .result { color: #2c3e50; font-weight: bold; background: #ecf0f1; padding: 5px 10px; border-radius: 4px; display: inline-block; }
+        code { background: #f8f8f8; padding: 2px 5px; color: #e74c3c; }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h3>1. Push and Pop</h3>
+        <p>Original: [1, 2, 3] | Push: 4 | Pop: (removes 4)</p>
+        <div id="q1" class="result"></div>
+    </section>
+
+    <section>
+        <h3>2. Map (Square Numbers)</h3>
+        <p>Array: [1, 2, 3, 4, 5]</p>
+        <div id="q2" class="result"></div>
+    </section>
+
+    <section>
+        <h3>3. Filter (Odd Numbers)</h3>
+        <p>Array: [1, 2, 3, 4, 5, 6]</p>
+        <div id="q3" class="result"></div>
+    </section>
+
+    <section>
+        <h3>4. Object & Greeting</h3>
+        <div id="q4" class="result"></div>
+    </section>
+
+    <section>
+        <h3>5. Rectangle Area</h3>
+        <p>Width: 10, Height: 20</p>
+        <div id="q5" class="result"></div>
+    </section>
+
+    <section>
+        <h3>6. Object Keys</h3>
+        <p>Object: { name, age, occupation }</p>
+        <div id="q6" class="result"></div>
+    </section>
+
+    <section>
+        <h3>7. Object Merge</h3>
+        <p>Obj1: { a: 1 }, Obj2: { b: 2 }</p>
+        <div id="q7" class="result"></div>
+    </section>
+
+    <section>
+        <h3>8. Reduce (Sum)</h3>
+        <p>Array: [10, 20, 30, 40]</p>
+        <div id="q8" class="result"></div>
+    </section>
+
+    <script>
+        function pushAndPop(arr, newElement) {
+            arr.push(newElement);
+            arr.pop();
+            return arr;
+        }
+        document.getElementById('q1').innerText = "Result: [" + pushAndPop([1, 2, 3], 4).join(', ') + "]";
+
+        const nums = [1, 2, 3, 4, 5];
+        const squareNumbers = (arr) => arr.map(num => num * num);
+        document.getElementById('q2').innerText = "Result: [" + squareNumbers(nums).join(', ') + "]";
+
+        const mixNums = [1, 2, 3, 4, 5, 6];
+        const getOddNumbers = (arr) => arr.filter(num => num % 2 !== 0);
+        document.getElementById('q3').innerText = "Result: [" + getOddNumbers(mixNums).join(', ') + "]";
+
+        const person = { name: "Harsh Prajapati", age: 21, occupation: "Information Technology Student" };
+        function greet(obj) {
+            return `Hello, my name is ${obj.name}. I am ${obj.age} years old and I am an ${obj.occupation}.`;
+        }
+        document.getElementById('q4').innerText = greet(person);
+
+        const getArea = (rect) => rect.width * rect.height;
+        document.getElementById('q5').innerText = "Area: " + getArea({ width: 10, height: 20 });
+
+        const getKeys = (obj) => Object.keys(obj);
+        document.getElementById('q6').innerText = "Keys: " + getKeys(person).join(", ");
+
+        function mergeObjects(obj1, obj2) {
+            return Object.assign({}, obj1, obj2);
+        }
+        const merged = mergeObjects({ a: 1 }, { b: 2 });
+        document.getElementById('q7').innerText = "Merged: " + JSON.stringify(merged);
+
+        const sumNums = [10, 20, 30, 40];
+        const calculateSum = (arr) => arr.reduce((acc, curr) => acc + curr, 0);
+        document.getElementById('q8').innerText = "Total Sum: " + calculateSum(sumNums);
+    </script>
+
+</body>
+</html>
