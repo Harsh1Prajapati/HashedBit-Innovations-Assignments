@@ -77,6 +77,8 @@ header {
     max-width: 100%;
     border-radius: 4px;
     margin-bottom: 10px;
+    height: 250px;
+    object-fit: cover;
 }
 
 footer {
